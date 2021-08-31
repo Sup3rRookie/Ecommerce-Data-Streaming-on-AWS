@@ -11,9 +11,9 @@ URL = os.environ.get('URL') # URL of our API GateWay
 data = pd.read_csv('testData.csv', sep = ',')
 
 # Write single row from the testfile into the api
-export = data.loc[2].to_json()
-response = requests.post(URL, data = export)
-print(response)
+# export = data.loc[2].to_json()
+# response = requests.post(URL, data = export)
+# print(response)
 
 # Write all the rows from the testfile to the api as 'Put' Request
 for i in data.index:
